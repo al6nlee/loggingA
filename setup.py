@@ -59,9 +59,9 @@ class UploadCommand(Command):
 
         self.status('Pushing git tags…')
         os.system('git commit -am "Update version {0}"'.format(about['__version__']))
+        os.system('git push')
         os.system('git tag v{0}'.format(about['__version__']))
         os.system('git push --tags')
-        os.system('git push')
 
         sys.exit()
 
