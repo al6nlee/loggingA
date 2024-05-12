@@ -10,7 +10,7 @@ from setuptools import find_packages, setup, Command
 from shutil import rmtree
 
 NAME = 'loggingA'
-VERSION = '0.0.4'
+VERSION = '0.0.5'
 
 here = os.path.abspath(os.path.dirname(__file__))
 
@@ -97,6 +97,6 @@ setup(
     },
     # $ setup.py publish support.
     cmdclass={
-        'upload': UploadCommand,  # 运行 python setup.py upload 时，就会触发 UploadCommand 类的 run() 方法
+        'upload': UploadCommand,  # 运行 python3 setup.py upload 时，就会触发 UploadCommand 类的 run() 方法
     },
 )
