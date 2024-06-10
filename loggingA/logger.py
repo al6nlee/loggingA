@@ -41,6 +41,14 @@ class LoggerA:
         func_name = inspect.currentframe().f_back.f_code.co_name
         self.logger.critical(f"[{func_name}] {message}")
 
+    def update_logger_extra(self, extra_info):
+        """
+        更新日志记录器的额外上下文
+        :param extra_info: 包含额外信息的字典
+        """
+        for key, value in extra_info.items():
+            setattr(logging.LoggerAdapter(self.logger, {}), key, value)
+
 
 def example_function(logger):
     logger.debug("Inside example_function")

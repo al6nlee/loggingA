@@ -10,7 +10,7 @@ from setuptools import find_packages, setup, Command
 from shutil import rmtree
 
 NAME = 'loggingA'
-VERSION = '0.0.6'
+VERSION = '0.0.7'
 
 here = os.path.abspath(os.path.dirname(__file__))
 
