@@ -26,8 +26,17 @@ pip3 install loggingA
 ## 使用
 
 ```python
-from loggingA.logger import get_logger
+from loggingA.logger import LoggerA
 
-logger = get_logger("./", "flask")
-logger.critical('This is a error message')
+
+# Example usage
+logger = LoggerA(level=logging.DEBUG, log_file="example.log")
+logger.debug("This is a debug message")
+logger.info("This is an info message")
+logger.warning("This is a warning message")
+logger.error("This is an error message")
+logger.critical("This is a critical message")
+
+# Example of logging within a function
+example_function(logger)
 ```
